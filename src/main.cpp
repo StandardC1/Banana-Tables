@@ -1,6 +1,11 @@
 #include <iostream>
 
 int main(int argc, char** argv) {
-    std::cout << "Hello, World!" << std::endl;
+
+    if (argc < 2) {
+        std::cerr << "[USAGE] " << argv[0] << " --flags filename.ltb" << std::endl;
+        return 1;
+    }
+
     return 0;
 }
